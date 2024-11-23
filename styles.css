@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light gradient background */
+  color: #333; /* Default text color */
+  margin: 0; /* Remove default body margin */
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navbar */
+#navbar {
+  background: #2b2d42; /* Dark blue-grey */
+  color: #fff;
+  padding: 1.5rem 0;
+  width: 100%; /* Ensure navbar covers full width */
+  position: fixed; /* Make navbar fixed at the top */
+  top: 0; /* Align navbar to the top */
+  left: 0; /* Align navbar to the left */
+  z-index: 1000; /* Ensure navbar is on top */
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar h1 {
+  color: #ffffff; /* White color for the logo */
+}
+
+#navbar ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#navbar ul li a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  background-color: #8d99ae; /* Lighter grey */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ff6a00, #ee0979); /* Bright gradient */
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+  margin-top: 4rem; /* Add margin to push content below fixed navbar */
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero h3 {
+  font-size: 2rem;
+}
+
+.hero .btn {
+  background-color: #ffffff; /* Light grey */
+  color: #2b2d42; /* Dark blue-grey */
+  padding: 0.8rem 2rem;
+  border-radius: 10px; /* Increased radius for buttons */
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Ensures the button spacing works properly */
+}
+
+.hero .btn:hover {
+  background-color: #8d99ae; /* Lighter grey */
+}
+
+/* About Section */
+.about-section {
+  background-color: #ffffff; /* White background */
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-card {
+  background-color: #f0f4f8; /* Light grey */
+  padding: 2rem;
+  border-radius: 10px; /* Increased radius for a softer look */
+}
+
+.about-card ul {
+  padding-left: 1.5rem;
+}
+
+.about-card ul li {
+  padding: 0.5rem 0;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff; /* White background */
+  padding: 1.5rem;
+  border-radius: 10px; /* Increased radius for project cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+}
+
+.project-card h3 a {
+  color: #2b2d42; /* Dark blue-grey */
+  text-decoration: none; /* Remove underline */
+}
+
+.project-card p {
+  color: #555; /* Darker grey */
+}
+
+/* Contact & Socials Section */
+.contact-section {
+  background-color: #ffffff; /* White background */
+  padding: 4rem 2rem;
+  border-radius: 10px; /* Increased radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  padding: 0.8rem 2rem;
+  border-radius: 10px; /* Increased radius for buttons */
+  transition: background-color 0.3s ease;
+}
+
+.social-links a.email {
+  background-color: #4caf50; /* Green */
+  color: #fff;
+}
+
+.social-links a.github {
+  background-color: #333; /* Dark grey */
+  color: #fff;
+}
+
+.social-links a.linkedin {
+  background-color: #0077b5; /* LinkedIn Blue */
+  color: #fff;
+}
+
+.social-links a.facebook {
+  background-color: #3b5998; /* Facebook Blue */
+  color: #fff;
+}
+
+.social-links a.instagram {
+  background-color: #c32aa3; /* Instagram Pink */
+  color: #fff;
+}
+
+.social-links a.youtube {
+  background-color: #ff0000; /* YouTube Red */
+  color: #fff;
+}
+
+.social-links a:hover {
+  opacity: 0.9; /* Lighter effect on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #2b2d42; /* Dark blue-grey */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%; /* Ensure footer covers full width */
+  position: relative; /* Ensure footer is relative to the flow of the document */
+  bottom: 0; /* Align footer to the bottom */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Button styles for project buttons */
+.btn.project-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem; /* Spacing for separation */
+  background-color: #ff6a00; /* Bright orange */
+  color: #fff;
+  border-radius: 10px; /* Rounded corners for button */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn.project-button:hover {
+  background-color: #ee0979; /* Bright pink on hover */
+}
+
+/* Remove underlines from links */
+a {
+  text-decoration: none; /* Remove all underlines */
+}
+
+.highlight {
+  color: white; /* Highlight color for the name */
+}
+.see-all-projects-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.see-all-projects-box h3 {
+  margin-bottom: 10px;
+}
+
+.see-all-projects-box p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+.btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* My Games Showcase Section */
+.showcase-section {
+  background-color: #ffffff;
+  /* White background */
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  /* Smooth rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  text-align: center;
+  /* Center-align text and button */
+  margin-top: 4rem;
+  /* Add spacing above the section */
+}
+
+.showcase-section h2 {
+  font-size: 2.5rem;
+  /* Larger font size for the section title */
+  margin-bottom: 1rem;
+  /* Space below the title */
+}
+
+.showcase-section p {
+  font-size: 1.2rem;
+  /* Slightly larger text for the description */
+  margin-bottom: 2rem;
+  /* Space below the description */
+  color: #555;
+  /* Dark grey for better readability */
+}
+
+.games-button {
+  background-color: #ff6a00;
+  /* Bright orange button */
+  color: #fff;
+  /* White text */
+  padding: 0.8rem 2rem;
+  /* Button padding */
+  border-radius: 10px;
+  /* Rounded corners for the button */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+  /* Bold text */
+  transition: background-color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.games-button:hover {
+  background-color: #ee0979;
+  /* Bright pink on hover */
+}
