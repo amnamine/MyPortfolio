@@ -312,3 +312,56 @@ a {
   background-color: #ee0979;
   /* Bright pink on hover */
 }
+/* My Mobile Apps Section */
+.apps-section {
+  background-color: #ffffff;
+  /* White background */
+  padding: 4rem 2rem;
+  /* Spacing inside the section */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  text-align: center;
+  /* Center-align text and button */
+  margin-top: 4rem;
+  /* Spacing above the section */
+}
+
+.apps-section h2 {
+  font-size: 2.5rem;
+  /* Larger font size for the section title */
+  margin-bottom: 1rem;
+  /* Space below the title */
+}
+
+.apps-section p {
+  font-size: 1.2rem;
+  /* Slightly larger text for the description */
+  margin-bottom: 2rem;
+  /* Space below the description */
+  color: #555;
+  /* Dark grey for better readability */
+}
+
+.apps-button {
+  background-color: #ff6a00;
+  /* Bright blue button */
+  color: #fff;
+  /* White text */
+  padding: 0.8rem 2rem;
+  /* Button padding */
+  border-radius: 10px;
+  /* Rounded corners for the button */
+  text-decoration: none;
+  /* Remove underline */
+  font-weight: bold;
+  /* Bold text */
+  transition: background-color 0.3s ease;
+  /* Smooth color transition */
+}
+
+.apps-button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
