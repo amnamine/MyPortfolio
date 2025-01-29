@@ -1,10 +1,39 @@
+/* Root Variables */
+:root {
+  --primary-color: #2d3436;
+  --secondary-color: #0984e3;
+  --accent-color: #00cec9;
+  --text-color: #2d3436;
+  --light-bg: #f8fafc;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+  --gradient-2: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  --gradient-3: linear-gradient(135deg, #00cec9, #0984e3, #6c5ce7);
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
 /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light gradient background */
-  color: #333; /* Default text color */
-  margin: 0; /* Remove default body margin */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(135deg, #f6f9fc 0%, #f1f5f9 100%);
+  color: var(--text-color);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Container */
@@ -16,14 +45,16 @@ body {
 
 /* Navbar */
 #navbar {
-  background: #2b2d42; /* Dark blue-grey */
-  color: #fff;
-  padding: 1.5rem 0;
-  width: 100%; /* Ensure navbar covers full width */
-  position: fixed; /* Make navbar fixed at the top */
-  top: 0; /* Align navbar to the top */
-  left: 0; /* Align navbar to the left */
-  z-index: 1000; /* Ensure navbar is on top */
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: var(--transition);
 }
 
 #navbar .container {
@@ -32,336 +63,188 @@ body {
   align-items: center;
 }
 
-#navbar h1 {
-  color: #ffffff; /* White color for the logo */
-}
-
 #navbar ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  list-style: none;
+}
+
+#navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #navbar ul li a {
-  color: #fff;
+  color: var(--text-color);
+  font-weight: 500;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition: var(--transition);
 }
 
-#navbar ul li a:hover {
-  background-color: #8d99ae; /* Lighter grey */
+#navbar ul li a:hover,
+#navbar ul li a.active {
+  background: var(--gradient-1);
+  color: white;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #ff6a00, #ee0979); /* Bright gradient */
-  color: #fff;
-  padding: 6rem 0;
+  background: var(--gradient-2);
+  background-size: 200% 200%;
+  padding: 8rem 0 6rem;
+  color: white;
   text-align: center;
-  margin-top: 4rem; /* Add margin to push content below fixed navbar */
+  margin-top: 70px;
 }
 
 .hero h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
 }
 
-.hero .btn {
-  background-color: #ffffff; /* Light grey */
-  color: #2b2d42; /* Dark blue-grey */
-  padding: 0.8rem 2rem;
-  border-radius: 10px; /* Increased radius for buttons */
-  margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
-  display: inline-block; /* Ensures the button spacing works properly */
-}
-
-.hero .btn:hover {
-  background-color: #8d99ae; /* Lighter grey */
-}
-
-/* About Section */
-.about-section {
-  background-color: #ffffff; /* White background */
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-card {
-  background-color: #f0f4f8; /* Light grey */
-  padding: 2rem;
-  border-radius: 10px; /* Increased radius for a softer look */
-}
-
-.about-card ul {
-  padding-left: 1.5rem;
-}
-
-.about-card ul li {
-  padding: 0.5rem 0;
-}
-
-/* Projects Section */
-.projects-section {
-  padding: 4rem 2rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
+/* Project Cards */
 .project-card {
-  background-color: #ffffff; /* White background */
-  padding: 1.5rem;
-  border-radius: 10px; /* Increased radius for project cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .project-card h3 {
   margin-bottom: 1rem;
 }
 
-.project-card h3 a {
-  color: #2b2d42; /* Dark blue-grey */
-  text-decoration: none; /* Remove underline */
-}
-
 .project-card p {
-  color: #555; /* Darker grey */
+  margin-bottom: 1.5rem;
 }
 
-/* Contact & Socials Section */
-.contact-section {
-  background-color: #ffffff; /* White background */
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--gradient-2);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background-position: right center;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-tag {
+  background: var(--gradient-3);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 0;
+}
+
+.about-section {
+  background: var(--white);
   padding: 4rem 2rem;
-  border-radius: 10px; /* Increased radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
 }
 
+/* Social Links */
 .social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .social-links a {
   padding: 0.8rem 2rem;
-  border-radius: 10px; /* Increased radius for buttons */
-  transition: background-color 0.3s ease;
-}
-
-.social-links a.email {
-  background-color: #4caf50; /* Green */
-  color: #fff;
-}
-
-.social-links a.github {
-  background-color: #333; /* Dark grey */
-  color: #fff;
-}
-
-.social-links a.linkedin {
-  background-color: #0077b5; /* LinkedIn Blue */
-  color: #fff;
-}
-
-.social-links a.facebook {
-  background-color: #3b5998; /* Facebook Blue */
-  color: #fff;
-}
-
-.social-links a.instagram {
-  background-color: #c32aa3; /* Instagram Pink */
-  color: #fff;
-}
-
-.social-links a.youtube {
-  background-color: #ff0000; /* YouTube Red */
-  color: #fff;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: var(--transition);
+  color: white;
 }
 
 .social-links a:hover {
-  opacity: 0.9; /* Lighter effect on hover */
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 /* Footer */
 footer {
-  background-color: #2b2d42; /* Dark blue-grey */
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  width: 100%; /* Ensure footer covers full width */
-  position: relative; /* Ensure footer is relative to the flow of the document */
-  bottom: 0; /* Align footer to the bottom */
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Button styles for project buttons */
-.btn.project-button {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  margin-top: 1rem; /* Spacing for separation */
-  background-color: #ff6a00; /* Bright orange */
-  color: #fff;
-  border-radius: 10px; /* Rounded corners for button */
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.btn.project-button:hover {
-  background-color: #ee0979; /* Bright pink on hover */
-}
-
-/* Remove underlines from links */
-a {
-  text-decoration: none; /* Remove all underlines */
-}
-
-.highlight {
-  color: white; /* Highlight color for the name */
-}
-.see-all-projects-box {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-top: 50px;
-}
-
-.see-all-projects-box h3 {
-  margin-bottom: 10px;
-}
-
-.see-all-projects-box p {
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-.btn {
-  display: inline-block;
-  background-color: #007BFF;
+  background: var(--primary-color);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 2rem 0;
   text-align: center;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-/* My Games Showcase Section */
-.showcase-section {
-  background-color: #ffffff;
-  /* White background */
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  /* Smooth rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
-  text-align: center;
-  /* Center-align text and button */
   margin-top: 4rem;
-  /* Add spacing above the section */
 }
 
-.showcase-section h2 {
-  font-size: 2.5rem;
-  /* Larger font size for the section title */
-  margin-bottom: 1rem;
-  /* Space below the title */
-}
+/* Social Links Colors */
+.social-links a.email { background: #4caf50; }
+.social-links a.github { background: #333; }
+.social-links a.linkedin { background: #0077b5; }
+.social-links a.facebook { background: #3b5998; }
+.social-links a.instagram { background: #c32aa3; }
+.social-links a.youtube { background: #ff0000; }
 
-.showcase-section p {
-  font-size: 1.2rem;
-  /* Slightly larger text for the description */
-  margin-bottom: 2rem;
-  /* Space below the description */
-  color: #555;
-  /* Dark grey for better readability */
-}
-
-.games-button {
-  background-color: #ff6a00;
-  /* Bright orange button */
-  color: #fff;
-  /* White text */
-  padding: 0.8rem 2rem;
-  /* Button padding */
-  border-radius: 10px;
-  /* Rounded corners for the button */
-  text-decoration: none;
-  /* Remove underline */
-  font-weight: bold;
-  /* Bold text */
-  transition: background-color 0.3s ease;
-  /* Smooth color transition */
-}
-
-.games-button:hover {
-  background-color: #ee0979;
-  /* Bright pink on hover */
-}
-/* My Mobile Apps Section */
-.apps-section {
-  background-color: #ffffff;
-  /* White background */
-  padding: 4rem 2rem;
-  /* Spacing inside the section */
-  border-radius: 10px;
-  /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
-  text-align: center;
-  /* Center-align text and button */
-  margin-top: 4rem;
-  /* Spacing above the section */
-}
-
-.apps-section h2 {
-  font-size: 2.5rem;
-  /* Larger font size for the section title */
-  margin-bottom: 1rem;
-  /* Space below the title */
-}
-
-.apps-section p {
-  font-size: 1.2rem;
-  /* Slightly larger text for the description */
-  margin-bottom: 2rem;
-  /* Space below the description */
-  color: #555;
-  /* Dark grey for better readability */
-}
-
-.apps-button {
-  background-color: #ff6a00;
-  /* Bright blue button */
-  color: #fff;
-  /* White text */
-  padding: 0.8rem 2rem;
-  /* Button padding */
-  border-radius: 10px;
-  /* Rounded corners for the button */
-  text-decoration: none;
-  /* Remove underline */
-  font-weight: bold;
-  /* Bold text */
-  transition: background-color 0.3s ease;
-  /* Smooth color transition */
-}
-
-.apps-button:hover {
-  background-color: #0056b3;
-  /* Darker blue on hover */
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-2);
+  z-index: 1001;
+  transform-origin: 0%;
 }
