@@ -18,10 +18,10 @@
     <div class="container">
       <h1 class="logo"><a href="#home">Bouchiba Mohamed El Amine</a></h1>
       <ul>
-        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#hosted-projects">Hosted Projects</a></li>
+        <li><a href="#collections">All Collections</a></li>
         <li><a href="#contact-socials">Contact & Socials</a></li>
       </ul>
     </div>
@@ -76,91 +76,188 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="container projects-section">
-      <h2>GitHub Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/Flappy-Bird-AI" target="_blank">Flappy Bird AI</a></h3>
-          <p>AI-powered version of the classic Flappy Bird game built with Python and machine learning.</p>
-          <a href="https://github.com/amnamine/Flappy-Bird-AI" target="_blank" class="btn project-button">See Project</a>
+    <div class="container">
+      <h2>Projects</h2>
+      
+      <!-- Personal & Main Projects -->
+      <div class="project-category">
+        <h3>Personal & Main Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>Portfolio</h4>
+            <p>My professional portfolio showcasing my skills and projects.</p>
+            <button class="project-button" onclick="openProject('https://amnamine.github.io/MyPortfolio/')">View Project</button>
           </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/Sign-Language-Letters" target="_blank">Sign Language Letters</a></h3>
-          <p>A neural network-based project to detect hand signs for letters using OpenCV and TensorFlow.</p>
-          <a href="https://github.com/amnamine/Sign-Language-Letters" target="_blank" class="btn project-button">See Project</a>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/MNIST-HandWrittenDigit" target="_blank">MNIST Handwritten Digit</a></h3>
-          <p>A neural network model trained on the MNIST dataset to recognize handwritten digits.</p>
-          <a href="https://github.com/amnamine/MNIST-HandWrittenDigit" target="_blank" class="btn project-button">See Project</a>
-      </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/Traffic-Signs-Recognition" target="_blank">Traffic Signs Recognition</a></h3>
-          <p>An image classification project that identifies traffic signs using convolutional neural networks.</p>
-          <a href="https://github.com/amnamine/Traffic-Signs-Recognition" target="_blank" class="btn project-button">See Project</a>
+          <div class="project-card">
+            <h4>GitHub Profile</h4>
+            <p>My GitHub repository containing all my open-source projects.</p>
+            <button class="project-button" onclick="openProject('https://github.com/amnamine')">View Profile</button>
           </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/OpenCV-Projects" target="_blank">OpenCV Projects</a></h3>
-          <p>Various computer vision projects developed using OpenCV for image processing and detection.</p>
-          <a href="https://github.com/amnamine/OpenCV-Projects" target="_blank" class="btn project-button">See Project</a>
+          <div class="project-card">
+            <h4>Todo List</h4>
+            <p>A feature-rich todo list application with local storage.</p>
+            <button class="project-button" onclick="openProject('https://amnamine.github.io/TodooList/')">View Project</button>
           </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/Game-Developement-Projects" target="_blank">Game Development Projects</a></h3>
-          <p>Collection of Simple Games made with Godot, Python and Flutter.</p>
-          <a href="https://github.com/amnamine/Game-Developement-Projects" target="_blank" class="btn project-button">See Project</a>
-          </div>
-        <div class="project-card">
-          <h3><a href="https://github.com/amnamine/Simple-Login-Page" target="_blank">Simple Login Page</a></h3>
-          <p>A responsive and secure login page with authentication built using HTML, CSS, JS, ExpressJS, and SQLite</p>
-          <a href="https://github.com/amnamine/Simple-Login-Page" target="_blank" class="btn project-button">See Project</a>
+          <div class="project-card">
+            <h4>Elegant Clock</h4>
+            <p>A beautifully designed analog clock with smooth animations.</p>
+            <button class="project-button" onclick="openProject('https://amnamine.github.io/ElegantClock/')">View Project</button>
           </div>
         </div>
       </div>
-  </section>
 
-  <!-- Hosted Projects Section -->
-   <div class="container see-all-projects-box">
-   <h3>Explore More of My Work</h3>
-   <p>Check out all my projects in one place!</p>
-   <a href="https://amnamine.github.io/MyProjects/" target="_blank" class="btn project-button">See All My Projects</a>
+      <!-- Framework Showcases -->
+      <div class="project-category">
+        <h3>Framework Showcases</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>Next.js Project</h4>
+            <p>Modern web application built with Next.js, showcasing server-side rendering and static generation.</p>
+            <button class="project-button" onclick="openProject('https://next-js-six-wheat-39.vercel.app/')">View Project</button>
+          </div>
+          <div class="project-card">
+            <h4>Angular Project</h4>
+            <p>Full-featured Angular application demonstrating component architecture and TypeScript integration.</p>
+            <button class="project-button" onclick="openProject('https://angular-project-tan.vercel.app/')">View Project</button>
+          </div>
+          <div class="project-card">
+            <h4>Nuxt.js Project</h4>
+            <p>Vue.js-powered Nuxt application featuring automatic routing and modular architecture.</p>
+            <button class="project-button" onclick="openProject('https://nuxt-js-sand.vercel.app/')">View Project</button>
+          </div>
+          <div class="project-card">
+            <h4>Svelte Project</h4>
+            <p>Reactive web application built with Svelte, demonstrating its efficient compilation and state management.</p>
+            <button class="project-button" onclick="openProject('https://svelte-project-kappa.vercel.app/')">View Project</button>
+          </div>
+        </div>
       </div>
 
-<!-- My Games Showcase Section -->
-<section id="games-showcase">
-  <div class="container showcase-section">
-    <h2>My Games Showcase</h2>
-    <p>Explore the games I've developed! Check out my collection of creative and engaging games below.</p>
-    <a href="https://amnamine.github.io/MyGames/" target="_blank" class="btn games-button">View My Games</a>
+      <!-- Web Applications -->
+      <div class="project-category">
+        <h3>Web Applications</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>CSC Club</h4>
+            <p>Official website for the Computer Science Club.</p>
+            <button class="project-button" onclick="openProject('https://cscclub-mu.vercel.app/')">Visit Site</button>
+          </div>
+          <div class="project-card">
+            <h4>Drivini</h4>
+            <p>A modern driving school management system.</p>
+            <button class="project-button" onclick="openProject('https://drivini.vercel.app/')">Visit Site</button>
+          </div>
+          <div class="project-card">
+            <h4>CSCC Website</h4>
+            <p>Computer Science Club Community platform.</p>
+            <button class="project-button" onclick="openProject('https://cscc-website.vercel.app/')">Visit Site</button>
+          </div>
+          <div class="project-card">
+            <h4>CSCC Ecopies</h4>
+            <p>Digital document management system for CSCC.</p>
+            <button class="project-button" onclick="openProject('https://cscc-ecopies.vercel.app/')">Visit Site</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Calculators -->
+      <div class="project-category">
+        <h3>Tools & Calculators</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>BMI Calculator</h4>
+            <p>Calculate your Body Mass Index with this easy-to-use tool.</p>
+            <button class="project-button" onclick="openProject('https://amnamine.github.io/BMI-Calculator/')">Try It</button>
+          </div>
+          <div class="project-card">
+            <h4>Weather App</h4>
+            <p>Check real-time weather conditions for any location.</p>
+            <button class="project-button" onclick="openProject('https://amnamine.github.io/Simple-Weather-App/')">Try It</button>
+          </div>
+          <div class="project-card">
+            <h4>Note Taking App</h4>
+            <p>Simple and efficient note-taking application.</p>
+            <button class="project-button" onclick="openProject('https://note-taking-app-kappa-self.vercel.app/')">Try It</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Games -->
+      <div class="project-category">
+        <h3>Games</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>Dodge The Creeps</h4>
+            <p>An exciting arcade-style game of survival.</p>
+            <button class="project-button" onclick="openProject('https://dodge-the-creeps-seven.vercel.app/')">Play Now</button>
+          </div>
+          <div class="project-card">
+            <h4>Snake Game</h4>
+            <p>Classic snake game with modern graphics.</p>
+            <button class="project-button" onclick="openProject('https://snake-game-mocha-pi.vercel.app/')">Play Now</button>
+          </div>
+          <div class="project-card">
+            <h4>Tic Tac Toe</h4>
+            <p>Classic game of X's and O's with AI opponent.</p>
+            <button class="project-button" onclick="openProject('https://tic-tac-toe-game-ten-weld.vercel.app/')">Play Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fun Projects -->
+      <div class="project-category">
+        <h3>Fun Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h4>Coin Flip</h4>
+            <p>Simple coin flip simulator with animation.</p>
+            <button class="project-button" onclick="openProject('https://coin-flip-gold.vercel.app/')">Try It</button>
+          </div>
+          <div class="project-card">
+            <h4>Dice Roll</h4>
+            <p>3D dice rolling simulator with physics.</p>
+            <button class="project-button" onclick="openProject('https://dice-roll-plum.vercel.app/')">Try It</button>
+          </div>
+          <div class="project-card">
+            <h4>Jokes Generator</h4>
+            <p>Random joke generator using various APIs.</p>
+            <button class="project-button" onclick="openProject('https://jokes-generator-sigma.vercel.app/')">Try It</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- My Mobile Apps Section -->
-  <section id="mobile-apps">
-    <div class="container apps-section">
-      <h2>My Mobile Apps</h2>
-      <p>Explore the mobile apps I've developed, showcasing creativity and functionality.</p>
-      <a href="https://amnamine.github.io/MyMobileApps/" target="_blank" class="btn apps-button">View My Apps</a>
-  </div>
-</section>
+  <!-- Collections Section -->
+  <section id="collections">
+    <div class="container collections-section">
+      <h2>All Collections</h2>
+      <div class="collections-grid">
+        <div class="collection-card">
+          <h3>Web Projects</h3>
+          <p>Explore my complete collection of web development projects, including frameworks, tools, and applications.</p>
+          <button class="collection-button" onclick="openProject('https://amnamine.github.io/MyProjects/')">
+            <span class="button-text">View All Web Projects</span>
+            <span class="button-icon">🌐</span>
+          </button>
+        </div>
 
-  <section id="hosted-projects">
-    <div class="container projects-section">
-      <h2>Hosted Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="https://amnamine.github.io/BMI-Calculator/" target="_blank">BMI Calculator</a></h3>
-          <p>A simple web-based BMI calculator to determine Body Mass Index.</p>
-          <a href="https://amnamine.github.io/BMI-Calculator/" target="_blank" class="btn project-button">See Project</a>
+        <div class="collection-card">
+          <h3>Games Collection</h3>
+          <p>Check out my portfolio of games developed using various technologies and game engines.</p>
+          <button class="collection-button" onclick="openProject('https://amnamine.github.io/MyGames/')">
+            <span class="button-text">View All Games</span>
+            <span class="button-icon">🎮</span>
+          </button>
         </div>
-        <div class="project-card">
-          <h3><a href="https://amnamine.github.io/Simple-Calculator/" target="_blank">Simple Calculator</a></h3>
-          <p>A basic arithmetic calculator built with HTML, CSS, and JavaScript.</p>
-          <a href="https://amnamine.github.io/Simple-Calculator/" target="_blank" class="btn project-button">See Project</a>
-        </div>
-        <div class="project-card">
-          <h3><a href="https://amnamine.github.io/Simple-Weather-App/" target="_blank">Simple Weather App</a></h3>
-          <p>A weather forecasting app that uses an external API to show current weather conditions.</p>
-          <a href="https://amnamine.github.io/Simple-Weather-App/" target="_blank" class="btn project-button">See Project</a>
+
+        <div class="collection-card">
+          <h3>Mobile Apps</h3>
+          <p>Discover my mobile applications built with Flutter and other mobile development frameworks.</p>
+          <button class="collection-button" onclick="openProject('https://amnamine.github.io/MyMobileApps/')">
+            <span class="button-text">View All Mobile Apps</span>
+            <span class="button-icon">📱</span>
+          </button>
         </div>
       </div>
     </div>
@@ -184,8 +281,17 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Bouchiba Mohamed El Amine. All Rights Reserved.</p>
+    <div class="container">
+      <p>Designed & Developed with <span class="heart">❤️</span> by Bouchiba Mohamed El Amine</p>
+      <p class="copyright">&copy; 2024 | All Rights Reserved</p>
+    </div>
   </footer>
+
+  <script>
+    function openProject(url) {
+      window.open(url, '_blank');
+    }
+  </script>
 
 </body>
 </html>
