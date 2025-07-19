@@ -456,6 +456,7 @@ footer::after {
 /* Social Links Colors */
 .social-links a.email { background: #4caf50; }
 .social-links a.github { background: #333; }
+.social-links a.kaggle { background: #20beff; }
 .social-links a.linkedin { background: #0077b5; }
 .social-links a.facebook { background: #3b5998; }
 .social-links a.instagram { background: #c32aa3; }
