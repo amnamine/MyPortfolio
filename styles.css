@@ -649,3 +649,114 @@ footer::after {
     padding: 1.5rem 0.2rem 1.2rem 0.2rem;
   }
 }
+
+.certificates-section {
+  background: var(--white);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+.certificates-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  position: relative;
+}
+
+.certificates-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
+  border-radius: 2px;
+}
+
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.certificate-card {
+  background: linear-gradient(135deg, #fffbe6 0%, #fffde4 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.10);
+  transition: var(--transition);
+  text-align: center;
+  border: 2px solid #ffe066;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.certificate-card h3 {
+  font-size: 1.7rem;
+  color: #bfa100;
+  margin-bottom: 1rem;
+}
+
+.certificate-card p {
+  color: var(--text-color);
+  opacity: 0.85;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.certificate-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
+  color: #6c5ce7;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.13);
+}
+
+.certificate-button:hover {
+  background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+  color: #2d3436;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.18);
+}
+
+.certificate-button .button-icon {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .certificates-section {
+    max-width: 98vw;
+    padding: 2.5rem 0.5rem;
+  }
+  .certificate-card {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates-section {
+    max-width: 100vw;
+    padding: 1.5rem 0.2rem;
+  }
+  .certificate-card {
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+  }
+}
