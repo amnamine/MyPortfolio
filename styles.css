@@ -605,9 +605,19 @@ section {
   border-color: var(--accent-primary);
 }
 
+.project-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px; /* Set a fixed height */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem; /* For emoji icons */
+}
+
 .project-icon img {
-  width: 48px; /* Or adjust as needed */
-  height: 48px; /* Or adjust as needed */
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
