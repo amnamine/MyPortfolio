@@ -12,10 +12,14 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- Navbar -->
   <nav id="navbar">
     <div class="container">
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <h1 class="logo"><a href="#home">Bouchiba Mohamed El Amine</a></h1>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -23,51 +27,162 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#collections">All Collections</a></li>
         <li><a href="#contact-socials">Contact & Socials</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- Hero Section -->
   <section id="home">
     <div class="hero container">
-      <h2>Hi, I'm <span class="highlight">Bouchiba Mohamed El Amine</span></h2>
-      <h3>Fullstack Web Developer | AI Developer | Mobile Developer | Game Developer </h3>
-      <a href="#projects" class="btn view-projects">View Projects</a>
+      <div class="hero-text">
+        <h2>Hi, I'm <span class="highlight">Bouchiba Mohamed El Amine</span></h2>
+        <h3>Fullstack Web Developer | AI Developer | Mobile Developer | Game Developer </h3>
+        <a href="#projects" class="btn view-projects">View Projects</a>
+      </div>
+      <div class="code-showcase">
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+              </div>
+              <div class="window-title">about-me.js</div>
+            </div>
+            <div class="code-content">
+              <div class="code-line">
+                <span class="line-number">1</span>
+                <span class="code-text"><span class="keyword">const</span> <span class="variable">BouchibaMohamedElAmine</span> = {</span>
+              </div>
+              <div class="code-line">
+                <span class="line-number">2</span>
+                <span class="code-text">  <span class="property">title</span>: <span class="string">'Fullstack Developer & AI Enthusiast'</span>,</span>
+              </div>
+              <div class="code-line">
+                <span class="line-number">3</span>
+                <span class="code-text">  <span class="property">skills</span>: [<span class="string">'React'</span>, <span class="string">'Node.js'</span>, <span class="string">'Python'</span>, <span class="string">'Flutter'</span>],</span>
+              </div>
+              <div class="code-line">
+                <span class="line-number">4</span>
+                <span class="code-text">  <span class="property">contact</span>: <span class="string">'medelaminebouchiba@gmail.com'</span>,</span>
+              </div>
+              <div class="code-line">
+                <span class="line-number">5</span>
+                <span class="code-text"><span class="comment">// Building innovative digital solutions</span></span>
+              </div>
+              <div class="code-line">
+                <span class="line-number">6</span>
+                <span class="code-text">};</span>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
-    <div class="container about-section">
+    <div class="container">
+      <div class="section-header">
       <h2>About Me</h2>
-      <div class="about-card">
-        <p>
-          I am a versatile developer with a wide range of skills in various technologies. My primary focus lies in:
-        </p>
-        <ul>
-          <li><strong>Mobile Development:</strong> Building cross-platform mobile applications using <strong>Flutter</strong>.</li>
-          <li><strong>Artificial Intelligence:</strong> Applying <strong>Python</strong> for AI and machine learning projects, focusing on computer vision, neural networks, and deep learning.</li>
-          <li><strong>Web Development:</strong> Developing full-stack web applications using <strong>HTML, CSS, JS</strong> for the frontend with frameworks like <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>, and using <strong>ExpressJS</strong> for backend development.</li>
-           <li><strong>Game Development:</strong> Creating simple games using Godot, Python and Flutter.</li>
-        </ul>
-        <p>
-          My experience covers a wide array of technologies, from AI-driven applications to embedded systems. Let's explore my projects below!
-        </p>
-        <div class="skills-container">
+        <p class="section-tag">Passionate developer crafting digital experiences</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Hello, I'm Mohamed El Amine</h3>
+            <p>I'm a versatile developer with a passion for creating innovative solutions across multiple domains. My journey spans from building mobile apps to developing AI-powered systems.</p>
+            
+            <div class="expertise-areas">
+              <div class="expertise-item">
+                <div class="expertise-icon">📱</div>
+                <div class="expertise-content">
+                  <h4>Mobile Development</h4>
+                  <p>Building cross-platform applications with <strong>Flutter</strong>, creating seamless user experiences across iOS and Android.</p>
+                </div>
+              </div>
+              
+              <div class="expertise-item">
+                <div class="expertise-icon">🤖</div>
+                <div class="expertise-content">
+                  <h4>Artificial Intelligence</h4>
+                  <p>Developing AI solutions using <strong>Python</strong>, specializing in computer vision, neural networks, and deep learning applications.</p>
+                </div>
+              </div>
+              
+              <div class="expertise-item">
+                <div class="expertise-icon">🌐</div>
+                <div class="expertise-content">
+                  <h4>Web Development</h4>
+                  <p>Creating full-stack applications with modern frameworks like <strong>React</strong>, <strong>Next.js</strong>, and <strong>ExpressJS</strong>.</p>
+                </div>
+              </div>
+              
+              <div class="expertise-item">
+                <div class="expertise-icon">🎮</div>
+                <div class="expertise-content">
+                  <h4>Game Development</h4>
+                  <p>Designing interactive games using <strong>Godot</strong>, <strong>Python</strong>, and <strong>Flutter</strong> for various platforms.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-section">
           <h3>Technical Skills</h3>
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h4>Languages</h4>
           <div class="skills-grid">
             <a href="https://www.python.org" target="_blank" class="skill-tag">Python</a>
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-tag">JavaScript</a>
+                <a href="https://dart.dev" target="_blank" class="skill-tag">Dart</a>
+                <a href="https://www.typescriptlang.org" target="_blank" class="skill-tag">TypeScript</a>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h4>Frontend</h4>
+              <div class="skills-grid">
             <a href="https://reactjs.org" target="_blank" class="skill-tag">React</a>
-            <a href="https://flutter.dev" target="_blank" class="skill-tag">Flutter</a>
-            <a href="https://www.tensorflow.org" target="_blank" class="skill-tag">Machine Learning</a>
-            <a href="https://opencv.org" target="_blank" class="skill-tag">Computer Vision</a>
+                <a href="https://nextjs.org" target="_blank" class="skill-tag">Next.js</a>
+                <a href="https://angular.io" target="_blank" class="skill-tag">Angular</a>
+                <a href="https://vuejs.org" target="_blank" class="skill-tag">Vue.js</a>
+                <a href="https://tailwindcss.com" target="_blank" class="skill-tag">Tailwind CSS</a>
+                <a href="https://getbootstrap.com" target="_blank" class="skill-tag">Bootstrap</a>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h4>Backend & Mobile</h4>
+              <div class="skills-grid">
             <a href="https://nodejs.org" target="_blank" class="skill-tag">Node.js</a>
             <a href="https://expressjs.com" target="_blank" class="skill-tag">Express</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-tag">HTML5</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-tag">CSS3</a>
+                <a href="https://flutter.dev" target="_blank" class="skill-tag">Flutter</a>
+                <a href="https://www.postgresql.org" target="_blank" class="skill-tag">PostgreSQL</a>
+                <a href="https://www.mongodb.com" target="_blank" class="skill-tag">MongoDB</a>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h4>AI & Tools</h4>
+              <div class="skills-grid">
+                <a href="https://www.tensorflow.org" target="_blank" class="skill-tag">TensorFlow</a>
+                <a href="https://opencv.org" target="_blank" class="skill-tag">OpenCV</a>
+                <a href="https://pytorch.org" target="_blank" class="skill-tag">PyTorch</a>
             <a href="https://git-scm.com" target="_blank" class="skill-tag">Git</a>
-            <a href="https://www.postgresql.org" target="_blank" class="skill-tag">SQL</a>
+                <a href="https://godotengine.org" target="_blank" class="skill-tag">Godot</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -77,150 +192,206 @@
   <!-- Projects Section -->
   <section id="projects">
     <div class="container">
+      <div class="section-header">
       <h2>Projects</h2>
+        <p class="section-tag">Explore my work across different technologies and domains</p>
+      </div>
+      
+      <!-- Project Filter -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+        <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+        <button class="filter-btn" data-filter="webapps">Web Apps</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+        <button class="filter-btn" data-filter="games">Games</button>
+        <button class="filter-btn" data-filter="fun">Fun</button>
+      </div>
       
       <!-- Personal & Main Projects -->
-      <div class="project-category">
+      <div class="project-category" data-category="personal">
         <h3>Personal & Main Projects</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="personal,portfolio">
+            <div class="project-icon">💼</div>
             <h4>Portfolio</h4>
             <p>My professional portfolio showcasing my skills and projects.</p>
+            <div class="project-tech">HTML, CSS, JS</div>
             <button class="project-button" onclick="openProject('https://amnamine.github.io/MyPortfolio/')">View Project</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="personal,github">
+            <div class="project-icon">🐙</div>
             <h4>GitHub Profile</h4>
             <p>My GitHub repository containing all my open-source projects.</p>
+            <div class="project-tech">Open Source</div>
             <button class="project-button" onclick="openProject('https://github.com/amnamine')">View Profile</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="personal,tools">
+            <div class="project-icon">✅</div>
             <h4>Todo List</h4>
             <p>A feature-rich todo list application with local storage.</p>
+            <div class="project-tech">HTML, CSS, JS</div>
             <button class="project-button" onclick="openProject('https://amnamine.github.io/TodooList/')">View Project</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="personal,fun">
+            <div class="project-icon">🕐</div>
             <h4>Elegant Clock</h4>
             <p>A beautifully designed analog clock with smooth animations.</p>
+            <div class="project-tech">HTML, CSS, JS</div>
             <button class="project-button" onclick="openProject('https://amnamine.github.io/ElegantClock/')">View Project</button>
           </div>
         </div>
       </div>
 
       <!-- Framework Showcases -->
-      <div class="project-category">
+      <div class="project-category" data-category="frameworks">
         <h3>Framework Showcases</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="frameworks,nextjs">
+            <div class="project-icon">⚡</div>
             <h4>Next.js Project</h4>
             <p>Discover a website built with Next.js that not only demonstrates its power but also explains the core features and benefits of using Next.js for modern web development.</p>
+            <div class="project-tech">Next.js, React</div>
             <button class="project-button" onclick="openProject('https://next-js-six-wheat-39.vercel.app/')">View Project</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="frameworks,angular">
+            <div class="project-icon">🅰️</div>
             <h4>Angular Project</h4>
-            <p>Explore an Angular-powered site dedicated to showcasing and explaining Angular’s robust architecture, component system, and why it’s a top choice for scalable web apps.</p>
+            <p>Explore an Angular-powered site dedicated to showcasing and explaining Angular's robust architecture, component system, and why it's a top choice for scalable web apps.</p>
+            <div class="project-tech">Angular, TypeScript</div>
             <button class="project-button" onclick="openProject('https://angular-project-tan.vercel.app/')">View Project</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="frameworks,nuxt">
+            <div class="project-icon">💚</div>
             <h4>Nuxt.js Project</h4>
-            <p>Visit a Nuxt.js-based website that guides you through Nuxt’s features, automatic routing, and how it enhances Vue.js development for universal applications.</p>
+            <p>Visit a Nuxt.js-based website that guides you through Nuxt's features, automatic routing, and how it enhances Vue.js development for universal applications.</p>
+            <div class="project-tech">Nuxt.js, Vue.js</div>
             <button class="project-button" onclick="openProject('https://nuxt-js-sand.vercel.app/')">View Project</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="frameworks,svelte">
+            <div class="project-icon">🧡</div>
             <h4>Svelte Project</h4>
-            <p>Experience a Svelte-built site that introduces Svelte’s unique approach to reactivity and compilation, with clear explanations and interactive examples.</p>
+            <p>Experience a Svelte-built site that introduces Svelte's unique approach to reactivity and compilation, with clear explanations and interactive examples.</p>
+            <div class="project-tech">Svelte, JavaScript</div>
             <button class="project-button" onclick="openProject('https://svelte-project-kappa.vercel.app/')">View Project</button>
           </div>
         </div>
       </div>
 
       <!-- Web Applications -->
-      <div class="project-category">
+      <div class="project-category" data-category="webapps">
         <h3>Web Applications</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="webapps,club">
+            <div class="project-icon">🎓</div>
             <h4>CSC Club</h4>
             <p>Official website for the Computer Science Club.</p>
+            <div class="project-tech">React, Vercel</div>
             <button class="project-button" onclick="openProject('https://cscclub-mu.vercel.app/')">Visit Site</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="webapps,management">
+            <div class="project-icon">🚗</div>
             <h4>Drivini</h4>
             <p>A modern driving school management system.</p>
+            <div class="project-tech">Full Stack</div>
             <button class="project-button" onclick="openProject('https://drivini.vercel.app/')">Visit Site</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="webapps,community">
+            <div class="project-icon">👥</div>
             <h4>CSCC Website</h4>
             <p>Computer Science Club Community platform.</p>
+            <div class="project-tech">React, Vercel</div>
             <button class="project-button" onclick="openProject('https://cscc-website.vercel.app/')">Visit Site</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="webapps,documents">
+            <div class="project-icon">📄</div>
             <h4>CSCC Ecopies</h4>
             <p>Digital document management system for CSCC.</p>
+            <div class="project-tech">React, Vercel</div>
             <button class="project-button" onclick="openProject('https://cscc-ecopies.vercel.app/')">Visit Site</button>
           </div>
         </div>
       </div>
 
       <!-- Tools & Calculators -->
-      <div class="project-category">
+      <div class="project-category" data-category="tools">
         <h3>Tools & Calculators</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="tools,calculator">
+            <div class="project-icon">⚖️</div>
             <h4>BMI Calculator</h4>
             <p>Calculate your Body Mass Index with this easy-to-use tool.</p>
+            <div class="project-tech">HTML, CSS, JS</div>
             <button class="project-button" onclick="openProject('https://amnamine.github.io/BMI-Calculator/')">Try It</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="tools,weather">
+            <div class="project-icon">🌤️</div>
             <h4>Weather App</h4>
             <p>Check real-time weather conditions for any location.</p>
+            <div class="project-tech">API, JavaScript</div>
             <button class="project-button" onclick="openProject('https://amnamine.github.io/Simple-Weather-App/')">Try It</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="tools,notes">
+            <div class="project-icon">📝</div>
             <h4>Note Taking App</h4>
             <p>Simple and efficient note-taking application.</p>
+            <div class="project-tech">React, Vercel</div>
             <button class="project-button" onclick="openProject('https://note-taking-app-kappa-self.vercel.app/')">Try It</button>
           </div>
         </div>
       </div>
 
       <!-- Games -->
-      <div class="project-category">
+      <div class="project-category" data-category="games">
         <h3>Games</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="games,arcade">
+            <div class="project-icon">🎮</div>
             <h4>Dodge The Creeps</h4>
             <p>An exciting arcade-style game of survival.</p>
+            <div class="project-tech">Godot, Game Dev</div>
             <button class="project-button" onclick="openProject('https://dodge-the-creeps-seven.vercel.app/')">Play Now</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="games,classic">
+            <div class="project-icon">🐍</div>
             <h4>Snake Game</h4>
             <p>Classic snake game with modern graphics.</p>
+            <div class="project-tech">JavaScript, Canvas</div>
             <button class="project-button" onclick="openProject('https://snake-game-mocha-pi.vercel.app/')">Play Now</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="games,ai">
+            <div class="project-icon">⭕</div>
             <h4>Tic Tac Toe</h4>
             <p>Classic game of X's and O's with AI opponent.</p>
+            <div class="project-tech">JavaScript, AI</div>
             <button class="project-button" onclick="openProject('https://tic-tac-toe-game-ten-weld.vercel.app/')">Play Now</button>
           </div>
         </div>
       </div>
 
       <!-- Fun Projects -->
-      <div class="project-category">
+      <div class="project-category" data-category="fun">
         <h3>Fun Projects</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-tags="fun,simulator">
+            <div class="project-icon">🪙</div>
             <h4>Coin Flip</h4>
             <p>Simple coin flip simulator with animation.</p>
+            <div class="project-tech">JavaScript, Animation</div>
             <button class="project-button" onclick="openProject('https://coin-flip-gold.vercel.app/')">Try It</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="fun,3d">
+            <div class="project-icon">🎲</div>
             <h4>Dice Roll</h4>
             <p>3D dice rolling simulator with physics.</p>
+            <div class="project-tech">3D, Physics</div>
             <button class="project-button" onclick="openProject('https://dice-roll-plum.vercel.app/')">Try It</button>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-tags="fun,api">
+            <div class="project-icon">😄</div>
             <h4>Jokes Generator</h4>
             <p>Random joke generator using various APIs.</p>
+            <div class="project-tech">API, JavaScript</div>
             <button class="project-button" onclick="openProject('https://jokes-generator-sigma.vercel.app/')">Try It</button>
           </div>
         </div>
@@ -229,41 +400,64 @@
   </section>
 
   <!-- Full Stack Projects Section -->
-  <section id="fullstack-projects">
+  <section id="fullstack-projects" class="section alt">
     <div class="container">
-      <h2>Full Stack Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h4>PhishGuard</h4>
-          <p>AI-powered phishing URL detection.</p>
-          <button class="project-button" onclick="openProject('https://phishing-otd1.onrender.com/')">Visit PhishGuard</button>
+        <div class="fullstack-content">
+          <div class="section-header">
+            <h2>Full Stack Projects</h2>
+            <p class="section-tag">Production‑ready applications with modern tech stacks</p>
+          </div>
+          
+          <div class="projects-grid enhanced">
+            <div class="project-card premium" data-tags="fullstack,ai">
+              <div class="project-icon">🛡️</div>
+              <h4>PhishGuard</h4>
+              <p>AI-powered phishing URL detection system with real-time analysis and threat assessment.</p>
+              <div class="project-tech">Python, Flask, AI/ML</div>
+              <button class="project-button" onclick="openProject('https://phishing-otd1.onrender.com/')">Visit PhishGuard</button>
+            </div>
+            
+            <div class="project-card premium" data-tags="fullstack,ecommerce">
+              <div class="project-icon">🛒</div>
+              <h4>ElectroMart</h4>
+              <p>Modern e-commerce platform for electronics with payment integration and inventory management.</p>
+              <div class="project-tech">React, Node.js, MongoDB</div>
+              <button class="project-button" onclick="openProject('https://ecommercewebsite2.onrender.com/')">Visit ElectroMart</button>
+            </div>
+            
+            <div class="project-card premium" data-tags="fullstack,iot">
+              <div class="project-icon">🌾</div>
+              <h4>Vision Tech-Agro Dz</h4>
+              <p>Smart farm management system using IoT technology for agricultural optimization.</p>
+              <div class="project-tech">IoT, React, Python</div>
+              <button class="project-button" onclick="openProject('https://siteverger.onrender.com/')">Visit Vision Tech-Agro Dz</button>
+            </div>
+            
+            <div class="project-card premium" data-tags="fullstack,ai,computer-vision">
+              <div class="project-icon">🚗</div>
+              <h4>Algerian License Plate Detector</h4>
+              <p>Advanced computer vision system for detecting and recognizing Algerian license plates using YOLO.</p>
+              <div class="project-tech">Python, YOLO, OpenCV</div>
+              <button class="project-button" onclick="openProject('https://algerianlpwebsite.onrender.com/')">Visit License Plate Detector</button>
+            </div>
+            
+            <div class="project-card premium" data-tags="fullstack,ai,translation">
+              <div class="project-icon">📜</div>
+              <h4>Smart Historical Documents Translator</h4>
+              <p>AI-powered translation system for historical documents with multi-language support and text-to-speech.</p>
+              <div class="project-tech">AI, NLP, React</div>
+              <button class="project-button" onclick="openProject('https://translator-app-rho.vercel.app/')">Visit Translator</button>
+            </div>
+            
+            <div class="project-card premium" data-tags="fullstack,healthcare">
+              <div class="project-icon">🏥</div>
+              <h4>Cabinet de Diététique</h4>
+              <p>Comprehensive nutrition and wellness platform with consultation booking and progress tracking.</p>
+              <div class="project-tech">Full Stack, Healthcare</div>
+              <button class="project-button" onclick="openProject('https://nutritionnistesite.onrender.com/')">Visit Cabinet de Diététique</button>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h4>ElectroMart</h4>
-          <p>Modern e-commerce platform for electronics.</p>
-          <button class="project-button" onclick="openProject('https://ecommercewebsite2.onrender.com/')">Visit ElectroMart</button>
-        </div>
-        <div class="project-card">
-          <h4>Vision Tech-Agro Dz</h4>
-          <p>Website to manage farms using IoT technology.</p>
-          <button class="project-button" onclick="openProject('https://siteverger.onrender.com/')">Visit Vision Tech-Agro Dz</button>
-        </div>
-        <div class="project-card">
-          <h4>Algerian License Plate Detector</h4>
-          <p>Detect Algerian license plate numbers using YOLO.</p>
-          <button class="project-button" onclick="openProject('https://algerianlpwebsite.onrender.com/')">Visit License Plate Detector</button>
-        </div>
-        <div class="project-card">
-          <h4>Smart Historical Documents Translator</h4>
-          <p>Translate historical documents with AI. Multi-language, PDF, and text-to-speech support.</p>
-          <button class="project-button" onclick="openProject('https://translator-app-rho.vercel.app/')">Visit Translator</button>
-        </div>
-        <div class="project-card">
-          <h4>Cabinet de Diététique</h4>
-          <p>Personalized nutrition and wellness platform. Book consultations, track progress, and get expert advice.</p>
-          <button class="project-button" onclick="openProject('https://nutritionnistesite.onrender.com/')">Visit Cabinet de Diététique</button>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -321,34 +515,144 @@
 
   <!-- Contact & Socials Section -->
   <section id="contact-socials">
-    <div class="container contact-section">
-      <h2>Contact & Socials</h2>
-      <p>Feel free to reach out to me via email or connect with me on social media.</p>
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p class="section-tag">Let's collaborate and build something amazing together</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>I'm always excited to discuss new opportunities, collaborate on interesting projects, or just have a chat about technology and development.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>medelaminebouchiba@gmail.com</p>
+                <a href="mailto:medelaminebouchiba@gmail.com" class="contact-link">Send Email</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>Professional networking</p>
+                <a href="https://www.linkedin.com/in/amn-amine-bb50ab1a7/" target="_blank" class="contact-link">Connect</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">🐙</div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <p>Open source projects</p>
+                <a href="https://github.com/amnamine" target="_blank" class="contact-link">View Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-section">
+          <h3>Send a Message</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="social-links-section">
+        <h3>Follow Me</h3>
       <div class="social-links">
-        <a href="mailto:medelaminebouchiba@gmail.com" target="_blank" class="btn email">Email Me</a>
-        <a href="https://github.com/amnamine" target="_blank" class="btn github">GitHub</a>
-        <a href="https://www.kaggle.com/amineipad" target="_blank" class="btn kaggle">Kaggle</a>
-        <a href="https://www.linkedin.com/in/amn-amine-bb50ab1a7/" target="_blank" class="btn linkedin">LinkedIn</a>
-        <a href="https://www.facebook.com/amn.amine.5" target="_blank" class="btn facebook">Facebook</a>
-        <a href="https://www.instagram.com/amn_amine1/" target="_blank" class="btn instagram">Instagram</a>
-        <a href="https://www.youtube.com/@amineipad1053" target="_blank" class="btn youtube">YouTube</a>
+          <a href="https://github.com/amnamine" target="_blank" class="social-link github">
+            <span class="social-icon">🐙</span>
+            <span class="social-text">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/amn-amine-bb50ab1a7/" target="_blank" class="social-link linkedin">
+            <span class="social-icon">💼</span>
+            <span class="social-text">LinkedIn</span>
+          </a>
+          <a href="https://www.kaggle.com/amineipad" target="_blank" class="social-link kaggle">
+            <span class="social-icon">🏆</span>
+            <span class="social-text">Kaggle</span>
+          </a>
+          <a href="https://www.facebook.com/amn.amine.5" target="_blank" class="social-link facebook">
+            <span class="social-icon">📘</span>
+            <span class="social-text">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/amn_amine1/" target="_blank" class="social-link instagram">
+            <span class="social-icon">📷</span>
+            <span class="social-text">Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@amineipad1053" target="_blank" class="social-link youtube">
+            <span class="social-icon">📺</span>
+            <span class="social-text">YouTube</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>Designed & Developed with <span class="heart">❤️</span> by Bouchiba Mohamed El Amine</p>
-      <p class="copyright">&copy; 2025 | All Rights Reserved</p>
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h4>Bouchiba Mohamed El Amine</h4>
+        <p>A passionate developer creating modern and responsive web applications.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact-socials">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Me</h4>
+        <div class="social-links">
+          <a href="https://github.com/amnamine" target="_blank" class="social-link github"><span class="social-icon">🐙</span></a>
+          <a href="https://www.linkedin.com/in/amn-amine-bb50ab1a7/" target="_blank" class="social-link linkedin"><span class="social-icon">💼</span></a>
+          <a href="https://www.kaggle.com/amineipad" target="_blank" class="social-link kaggle"><span class="social-icon">🏆</span></a>
+          <a href="https://www.facebook.com/amn.amine.5" target="_blank" class="social-link facebook"><span class="social-icon">📘</span></a>
+          <a href="https://www.instagram.com/amn_amine1/" target="_blank" class="social-link instagram"><span class="social-icon">📷</span></a>
+          <a href="https://www.youtube.com/@amineipad1053" target="_blank" class="social-link youtube"><span class="social-icon">📺</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed & Developed with <span class="heart">❤️</span> by Bouchiba Mohamed El Amine &copy; 2025</p>
     </div>
   </footer>
+  </main>
 
-  <script>
-    function openProject(url) {
-      window.open(url, '_blank');
-    }
-  </script>
+  <script src="script.js" defer></script>
 
 </body>
 </html>
