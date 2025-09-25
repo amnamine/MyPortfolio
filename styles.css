@@ -575,11 +575,10 @@ section {
   border-color: var(--accent-primary);
 }
 
-.project-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
-  text-align: center;
+.project-icon img {
+  width: 48px; /* Or adjust as needed */
+  height: 48px; /* Or adjust as needed */
+  object-fit: contain;
 }
 
 .project-card h4 {
