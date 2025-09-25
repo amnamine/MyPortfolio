@@ -1115,8 +1115,14 @@ section {
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
-.social-link .social-icon {
-  font-size: 1.5rem;
+.social-link .social-icon img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon img {
+  transform: scale(1.2);
 }
 
 .social-link .social-text {
