@@ -680,6 +680,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
 .project-card.premium {
@@ -690,6 +691,9 @@ section {
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card.premium::before {
@@ -767,6 +771,7 @@ section {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .project-card.premium .project-button::before {
