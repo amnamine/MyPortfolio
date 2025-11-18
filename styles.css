@@ -152,20 +152,27 @@ body {
     justify-content: center;
   }
 
+  #navbar .container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
   #navbar ul {
-    position: absolute;
-    top: 72px;
-    right: 1rem;
+    position: static;
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 0.75rem 1rem;
     flex-direction: column;
     gap: 0.5rem;
     display: none;
-    width: calc(100% - 2rem);
-    max-width: 320px;
+    width: 100%;
     box-shadow: var(--shadow-lg);
+  }
+
+  #navbar ul li {
+    width: 100%;
+    text-align: center;
   }
 
   #navbar ul.show {
