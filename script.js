@@ -162,6 +162,10 @@ class ProjectFilter {
     this.filterButtons = document.querySelectorAll('.filter-btn');
     this.projectCards = document.querySelectorAll('.project-card');
     this.projectCategories = document.querySelectorAll('.project-category');
+    this.specialSections = {
+      fullstack: document.getElementById('fullstack-projects'),
+      ai: document.getElementById('ai-projects-yolo'),
+    };
     this.init();
   }
 
@@ -200,6 +204,13 @@ class ProjectFilter {
         category.style.display = 'none';
       }
     });
+
+    if (this.specialSections[filter]) {
+      this.specialSections[filter].scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (this.specialSections.ai && filter === 'all') {
+      // ensure default view shows entire projects area
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
 
