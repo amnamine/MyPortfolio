@@ -1307,6 +1307,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #navbar {
+    display: none;
+  }
+
+  #main {
+    padding-top: 0;
+  }
+
   .container {
     padding: 0 1rem;
   }
