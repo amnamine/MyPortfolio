@@ -139,6 +139,7 @@ class NavbarManager {
 
   handleNavbarScroll() {
     const currentScroll = window.pageYOffset;
+    const isMobile = window.innerWidth <= 768;
     
     if (currentScroll <= 0) {
       this.navbar.style.boxShadow = 'none';
@@ -146,9 +147,15 @@ class NavbarManager {
       this.navbar.style.boxShadow = 'var(--shadow-md)';
     }
     
-    if (currentScroll > this.lastScroll && currentScroll > 100) {
-      this.navbar.style.transform = 'translateY(-100%)';
+    // Disable auto-hide/show on mobile devices
+    if (!isMobile) {
+      if (currentScroll > this.lastScroll && currentScroll > 100) {
+        this.navbar.style.transform = 'translateY(-100%)';
+      } else {
+        this.navbar.style.transform = 'translateY(0)';
+      }
     } else {
+      // Always show navbar on mobile
       this.navbar.style.transform = 'translateY(0)';
     }
     
