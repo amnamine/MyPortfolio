@@ -887,67 +887,6 @@ section {
 .string { color: #10b981; }
 .comment { color: var(--text-muted); font-style: italic; }
 
-/* ===== COLLECTIONS SECTION ===== */
-#collections {
-  background: var(--bg-primary);
-}
-
-.collections-section {
-  text-align: center;
-}
-
-.collections-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.collection-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.collection-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--accent-primary);
-}
-
-.collection-card h3 {
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.collection-card p {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.collection-button {
-  background: var(--gradient-accent);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.collection-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
 /* ===== CERTIFICATES SECTION ===== */
 #certificates {
   background: var(--bg-secondary);
@@ -1288,7 +1227,6 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  .collections-grid,
   .certificates-grid {
     grid-template-columns: 1fr;
   }
@@ -1354,7 +1292,6 @@ footer {
   }
   
   .project-card,
-  .collection-card,
   .certificate-card {
     break-inside: avoid;
     box-shadow: none;

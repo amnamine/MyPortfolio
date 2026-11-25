@@ -249,7 +249,7 @@ class AnimationObserver {
       });
     }, this.observerOptions);
 
-    document.querySelectorAll('section, .project-card, .collection-card, .certificate-card').forEach(el => {
+    document.querySelectorAll('section, .project-card, .certificate-card').forEach(el => {
       observer.observe(el);
     });
   }
