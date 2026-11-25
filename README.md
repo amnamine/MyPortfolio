@@ -27,7 +27,7 @@ MyPortfolio/
 ├─ script.js
 ├─ favicon.svg
 ├─ README.md
-└─ images: cscc.png, facebook.png, fond.jpg, github.jpg, instagram.png,
+└─ images: cscc.png, facebook.png, github.jpg, instagram.png,
            kaggle.png, linkedin.png, youtube.png
 ```
 
